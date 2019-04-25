@@ -1,0 +1,26 @@
+{
+    "name": "balfour/laravel-query-filters",
+    "description": "A library for applying filters & sorts to a query builder",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matthew Goslett",
+            "email": "matthew@masterstart.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Balfour\\LaravelQueryFilters\\": "src/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
