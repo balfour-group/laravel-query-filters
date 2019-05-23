@@ -42,7 +42,7 @@ class BoolFilter extends SingleFieldFilter
             return $value;
         }
 
-        switch ($value) {
+        switch (strtolower($value)) {
             case 'true':
             case 'yes':
             case 'on':
