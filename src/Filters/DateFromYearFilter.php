@@ -16,14 +16,14 @@ class DateFromYearFilter extends SingleFieldFilter
     }
 
     /**
-     * @param $value
+     * @param string $value
      * @return array
      */
-    public function buildValues($value):array
+    public function buildValues(string $value): array
     {
         return [
-            $value.'-01-01',
-            $value.'-12-31'
+            $value . '-01-01',
+            $value . '-12-31'
         ];
     }
 }
