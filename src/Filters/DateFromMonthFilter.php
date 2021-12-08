@@ -3,6 +3,7 @@
 namespace Balfour\LaravelQueryFilters\Filters;
 
 use Balfour\LaravelQueryFilters\FilterSet;
+use Carbon\Carbon;
 
 class DateFromMonthFilter extends SingleFieldFilter
 {
@@ -21,11 +22,11 @@ class DateFromMonthFilter extends SingleFieldFilter
      */
     public function buildValues(string $value): array
     {
-        $date = \DateTime::createFromFormat('M Y', $value);
+        $date = Carbon::createFromFormat('M Y', $value);
 
         return [
-            $date->format('Y-m') . '-01',
-            $date->format('Y-m') . '-31'
+            $date->startOfMonth()->format('Y-m-d'),
+            $date->endOfMonth()->format('Y-m-d')
         ];
     }
 }
