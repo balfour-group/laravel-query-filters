@@ -10,7 +10,8 @@
         }
     ],
     "require": {
-        "illuminate/support": "^5.7"
+        "illuminate/support": "^5.7",
+        "nesbot/carbon": "^2.55"
     },
     "autoload": {
         "psr-4": {
