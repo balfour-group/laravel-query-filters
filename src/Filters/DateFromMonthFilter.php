@@ -23,7 +23,7 @@ class DateFromMonthFilter extends SingleFieldFilter
     public function buildValues(string $value): array
     {
         $splitDate = explode('-', $value);
-        $date = Carbon::createFromDate( $splitDate[1], $splitDate[0]);
+        $date = Carbon::createFromDate( $splitDate[0], $splitDate[1]);
 
         return [
             $date->startOfMonth()->format('Y-m-d'),
