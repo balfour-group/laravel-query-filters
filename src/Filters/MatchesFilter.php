@@ -10,6 +10,10 @@ class MatchesFilter extends SingleFieldFilter
      */
     public function apply($query, $value)
     {
-        $query->where($this->field, $value);
+        if ($value === 'null') {
+            $query->whereNull($this->field);
+        } else {
+            $query->where($this->field, $value);
+        }
     }
 }
